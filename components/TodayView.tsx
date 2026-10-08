@@ -31,7 +31,7 @@ function heat(pct: number): { filled: string; text: string; sc: string } {
   if (pct >= 70)
     return { filled: "bg-orange-500", text: "text-orange-600", sc: "#f97316" };
   if (pct >= 50)
-    return { filled: "bg-amber-500", text: "text-amber-700", sc: "#f59e0b" };
+    return { filled: "bg-teal-400", text: "text-teal-700", sc: "#2dd4bf" };
   return { filled: "bg-emerald-500", text: "text-emerald-600 dark:text-emerald-400", sc: "#10b981" };
 }
 
@@ -98,7 +98,7 @@ function NearRow({ t, rank }: { t: NearGraduation; rank: number }) {
       href={`${EXPLORER}/token/${t.token}`}
       target="_blank"
       rel="noreferrer"
-      className="flex gap-3 border-b border-(--kestrel-line)/70 px-4 py-3.5 transition-colors hover:bg-amber-500/10"
+      className="flex gap-3 border-b border-(--kestrel-line)/70 px-4 py-3.5 transition-colors hover:bg-teal-400/10"
     >
       <span className="w-7 shrink-0 pt-0.5 text-center font-mono text-[13px] font-black text-(--kestrel-faint)">
         {rank + 1}

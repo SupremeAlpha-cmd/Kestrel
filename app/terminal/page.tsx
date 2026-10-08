@@ -15,8 +15,8 @@ const tabs: { id: Tab; label: string; active: string; sc: string }[] = [
   {
     id: "today",
     label: "Today",
-    active: "bg-amber-500 text-white shadow-[2px_2px_0_rgba(var(--kestrel-shadow),0.25)]",
-    sc: "#f59e0b",
+    active: "bg-teal-400 text-white shadow-[2px_2px_0_rgba(var(--kestrel-shadow),0.25)]",
+    sc: "#2dd4bf",
   },
   {
     id: "flow",

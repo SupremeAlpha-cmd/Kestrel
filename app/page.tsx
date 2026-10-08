@@ -35,10 +35,10 @@ const views = [
 
 const accentStyles = {
   amber: {
-    edge: "border-l-amber-500",
-    num: "text-amber-500",
-    sc: "#f59e0b",
-    hover: "hover:border-amber-500",
+    edge: "border-l-teal-400",
+    num: "text-teal-400",
+    sc: "#2dd4bf",
+    hover: "hover:border-teal-400",
   },
   emerald: {
     edge: "border-l-emerald-500",
@@ -90,7 +90,7 @@ export default function Landing() {
       <header className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-br from-amber-200/70 via-rose-200/50 to-violet-200/70 dark:from-amber-500/25 dark:via-rose-500/15 dark:to-violet-500/25"
+          className="absolute inset-0 bg-gradient-to-br from-teal-100/70 via-rose-200/50 to-violet-200/70 dark:from-teal-400/25 dark:via-rose-500/15 dark:to-violet-500/25"
         />
         <div
           aria-hidden="true"
@@ -111,14 +111,14 @@ export default function Landing() {
             </div>
           </div>
           <p className="mt-8 font-mono text-[12px] font-black uppercase tracking-widest text-(--kestrel-muted)">
-            <span aria-hidden="true" className="mr-1.5 text-amber-600 dark:text-amber-400">
+            <span aria-hidden="true" className="mr-1.5 text-teal-600 dark:text-teal-300">
               ▸
             </span>
             Solana // live terminal
           </p>
           <h1 className="mx-auto mt-4 max-w-3xl text-5xl font-black leading-[1.02] tracking-tighter md:text-7xl">
             The tab that{" "}
-            <span className="underline decoration-amber-400 decoration-[6px] underline-offset-[10px]">
+            <span className="underline decoration-teal-300 decoration-[6px] underline-offset-[10px]">
               never closes.
             </span>
           </h1>
@@ -143,7 +143,7 @@ export default function Landing() {
       {/* Views — watch stations */}
       <section className="mx-auto max-w-5xl px-5 py-14">
         <p className="font-mono text-[12px] font-black uppercase tracking-widest text-(--kestrel-muted)">
-          <span aria-hidden="true" className="mr-1.5 text-amber-600 dark:text-amber-400">
+          <span aria-hidden="true" className="mr-1.5 text-teal-600 dark:text-teal-300">
             ▸
           </span>
           four watch stations
@@ -201,7 +201,7 @@ export default function Landing() {
                 n: "01",
                 t: "INDEX",
                 d: "Kestrel reads pump.fun curve events directly from Solana's public RPC. No middlemen, no stale APIs.",
-                c: "bg-amber-500",
+                c: "bg-teal-400",
               },
               {
                 n: "02",
@@ -246,7 +246,7 @@ export default function Landing() {
             aria-hidden="true"
             className="mx-auto h-20 w-20 rounded-2xl"
           />
-          <p className="mt-6 font-mono text-[12px] font-black uppercase tracking-widest text-amber-400">
+          <p className="mt-6 font-mono text-[12px] font-black uppercase tracking-widest text-teal-300">
             <span aria-hidden="true" className="mr-1.5">
               ▸
             </span>
@@ -254,7 +254,7 @@ export default function Landing() {
           </p>
           <h2 className="mx-auto mt-3 max-w-md text-3xl font-black tracking-tighter text-white sm:text-4xl">
             Keep the tab{" "}
-            <span className="underline decoration-amber-400 decoration-4 underline-offset-8">
+            <span className="underline decoration-teal-300 decoration-4 underline-offset-8">
               open.
             </span>
           </h2>
@@ -264,7 +264,7 @@ export default function Landing() {
           </p>
           <Link
             href="/terminal"
-            className="mt-8 inline-block rounded-lg bg-amber-400 px-8 py-4 text-[15px] font-black text-[#1c1917] shadow-[4px_4px_0_rgba(251,191,36,0.3)] transition-all hover:bg-amber-300 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+            className="mt-8 inline-block rounded-lg bg-teal-300 px-8 py-4 text-[15px] font-black text-[#1c1917] shadow-[4px_4px_0_rgba(251,191,36,0.3)] transition-all hover:bg-teal-200 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
           >
             OPEN THE TERMINAL →
           </Link>
@@ -290,7 +290,7 @@ export default function Landing() {
               href="https://github.com/SupremeAlpha-cmd/Kestrel"
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[11px] font-black uppercase tracking-widest text-(--kestrel-muted) underline decoration-amber-400 decoration-2 underline-offset-4 transition-colors hover:text-(--kestrel-ink)"
+              className="font-mono text-[11px] font-black uppercase tracking-widest text-(--kestrel-muted) underline decoration-teal-300 decoration-2 underline-offset-4 transition-colors hover:text-(--kestrel-ink)"
             >
               GitHub ↗
             </a>

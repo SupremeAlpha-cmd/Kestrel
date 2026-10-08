@@ -89,7 +89,7 @@ body {
    Corner-tick reticle — accent-colored targeting brackets on featured cards.
    Set --sc to the accent color on the element. */
 .scope-corners {
-  --sc: #f59e0b;
+  --sc: #2dd4bf;
   background-image:
     linear-gradient(var(--sc), var(--sc)),
     linear-gradient(var(--sc), var(--sc)),

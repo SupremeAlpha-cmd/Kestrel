@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 export type Tone = "amber" | "emerald" | "violet" | "rose" | "stone";
 
 const toneText: Record<Tone, string> = {
-  amber: "text-amber-700 dark:text-amber-400",
+  amber: "text-teal-700 dark:text-teal-300",
   emerald: "text-emerald-700 dark:text-emerald-400",
   violet: "text-violet-700 dark:text-violet-400",
   rose: "text-rose-700 dark:text-rose-400",
@@ -13,7 +13,7 @@ const toneText: Record<Tone, string> = {
 };
 
 const toneSolid: Record<Tone, string> = {
-  amber: "bg-amber-500",
+  amber: "bg-teal-400",
   emerald: "bg-emerald-500",
   violet: "bg-violet-500",
   rose: "bg-rose-500",
@@ -140,7 +140,7 @@ export function EmptyScope({
 }) {
   const sc =
     tone === "amber"
-      ? "#f59e0b"
+      ? "#2dd4bf"
       : tone === "emerald"
         ? "#10b981"
         : tone === "violet"

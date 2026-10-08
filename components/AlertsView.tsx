@@ -7,13 +7,13 @@ import { RULE_META, type AlertRuleType } from "@/lib/alerts";
 import { SignalTag, EmptyScope } from "./kestrel-ui";
 
 const typeSolid: Record<AlertRuleType, string> = {
-  graduation: "bg-amber-500 text-white",
+  graduation: "bg-teal-400 text-white",
   whale: "bg-emerald-500 text-white",
   launch: "bg-violet-500 text-white",
 };
 
 const typeSc: Record<AlertRuleType, string> = {
-  graduation: "#f59e0b",
+  graduation: "#2dd4bf",
   whale: "#10b981",
   launch: "#8b5cf6",
 };

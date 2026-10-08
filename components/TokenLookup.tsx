@@ -16,7 +16,7 @@ function fmt(n: number): string {
 function heat(pct: number): { filled: string; text: string } {
   if (pct >= 90) return { filled: "bg-rose-500", text: "text-rose-600 dark:text-rose-400" };
   if (pct >= 70) return { filled: "bg-orange-500", text: "text-orange-600" };
-  if (pct >= 50) return { filled: "bg-amber-500", text: "text-amber-700" };
+  if (pct >= 50) return { filled: "bg-teal-400", text: "text-teal-700" };
   return { filled: "bg-emerald-500", text: "text-emerald-600 dark:text-emerald-400" };
 }
 
@@ -63,12 +63,12 @@ export default function TokenLookup() {
           placeholder="paste a Solana mint address"
           spellCheck={false}
           aria-label="token address to look up"
-          className="scope-corners min-w-0 flex-1 border-2 border-(--kestrel-ink) bg-(--kestrel-card) px-3 py-2 font-mono text-[13px] font-bold text-(--kestrel-ink) placeholder:text-(--kestrel-faint) outline-none focus:border-amber-500"
+          className="scope-corners min-w-0 flex-1 border-2 border-(--kestrel-ink) bg-(--kestrel-card) px-3 py-2 font-mono text-[13px] font-bold text-(--kestrel-ink) placeholder:text-(--kestrel-faint) outline-none focus:border-teal-400"
         />
         <button
           onClick={scan}
           disabled={state.kind === "scanning"}
-          className="scope-corners shrink-0 border-2 border-(--kestrel-ink) bg-amber-500 px-4 py-2 font-mono text-[13px] font-black uppercase tracking-wider text-white shadow-[3px_3px_0_rgba(var(--kestrel-shadow),0.2)] transition-all hover:bg-amber-400 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-60"
+          className="scope-corners shrink-0 border-2 border-(--kestrel-ink) bg-teal-400 px-4 py-2 font-mono text-[13px] font-black uppercase tracking-wider text-white shadow-[3px_3px_0_rgba(var(--kestrel-shadow),0.2)] transition-all hover:bg-teal-300 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-60"
         >
           {state.kind === "scanning" ? "···" : "scan"}
         </button>

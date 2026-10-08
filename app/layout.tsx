@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://kestrel-hood.site";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://kestrel.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  themeColor: "#fffdf7",
+  themeColor: "#0b0d12",
   title: "Kestrel — what's happening on Solana",  description:
     "Kestrel watches the chain so you don't have to. Live graduations, trade flow, and wallet signals on Solana.",
   icons: { icon: "/logo.png", apple: "/logo.png" },
