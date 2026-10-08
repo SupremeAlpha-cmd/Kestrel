@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* Class-based dark mode — the theme toggle flips `.dark` on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Kestrel semantic surface tokens. Light = dawn watch, .dark = night watch. */
+:root {
+  --kestrel-paper: #fffdf7;
+  --kestrel-ink: #1c1917;
+  --kestrel-card: #ffffff;
+  --kestrel-muted: #57534e;
+  --kestrel-faint: #a8a29e;
+  --kestrel-soft: #f5f5f4;
+  --kestrel-line: #e7e5e4;
+  --kestrel-shadow: 28, 25, 23;
+  --kestrel-dot: rgba(28, 25, 23, 0.09);
+}
+
+.dark {
+  --kestrel-paper: #14120f;
+  --kestrel-ink: #f2ede3;
+  --kestrel-card: #1e1b17;
+  --kestrel-muted: #b3aa9c;
+  --kestrel-faint: #6e665b;
+  --kestrel-soft: #26221d;
+  --kestrel-line: #38322a;
+  --kestrel-shadow: 0, 0, 0;
+  --kestrel-dot: rgba(242, 237, 227, 0.08);
+}
+
+html {
+  background: var(--kestrel-paper);
+}
+
+body {
+  background: var(--kestrel-paper);
+  color: var(--kestrel-ink);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.45);
+  color: #1c1917;
+}
+
+/* Fresh tape rows slide in with a warm flash */
+@keyframes kestrel-row-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+    background-color: rgba(251, 191, 36, 0.18);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: transparent;
+  }
+}
+
+.kestrel-row-enter {
+  animation: kestrel-row-enter 0.45s ease-out;
+}
+
+/* Live indicator */
+@keyframes kestrel-pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+}
+
+.kestrel-live-dot {
+  animation: kestrel-pulse-dot 1.8s ease-in-out infinite;
+}
+
+/* Kestrel identity: the Watchtower.
+   Corner-tick reticle — accent-colored targeting brackets on featured cards.
+   Set --sc to the accent color on the element. */
+.scope-corners {
+  --sc: #f59e0b;
+  background-image:
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc)),
+    linear-gradient(var(--sc), var(--sc));
+  background-repeat: no-repeat;
+  background-size:
+    16px 3px, 3px 16px,
+    16px 3px, 3px 16px,
+    16px 3px, 3px 16px,
+    16px 3px, 3px 16px;
+  background-position:
+    0 0, 0 0,
+    100% 0, 100% 0,
+    0 100%, 0 100%,
+    100% 100%, 100% 100%;
+}
+
+/* Dotted survey grid — the lookout's map */
+.dot-grid {
+  background-image: radial-gradient(var(--kestrel-dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* Radar sweep behind the Eye */
+@keyframes kestrel-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.kestrel-sweep {
+  animation: kestrel-sweep 7s linear infinite;
+  background: conic-gradient(
+    from 0deg,
+    rgba(245, 158, 11, 0.4),
+    rgba(245, 158, 11, 0.08) 18%,
+    transparent 30%
+  );
+}
+
+/* Urgent blink — graduation imminent, fired alerts */
+@keyframes kestrel-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.kestrel-blink {
+  animation: kestrel-blink 1.1s ease-in-out infinite;
+}
+
+/* Loading dots */
+@keyframes kestrel-dot-bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.kestrel-loading-dot {
+  animation: kestrel-dot-bounce 1.2s ease-in-out infinite;
+}
+
+.kestrel-loading-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.kestrel-loading-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .kestrel-row-enter,
+  .kestrel-live-dot,
+  .kestrel-sweep,
+  .kestrel-blink,
+  .kestrel-loading-dot {
+    animation: none;
+  }
+}
